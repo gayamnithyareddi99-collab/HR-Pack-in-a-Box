@@ -1,0 +1,1805 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HR Pack-in-a-Box</title>
+
+<style>
+
+/* GENERAL */
+
+body{
+margin:0;
+font-family:Segoe UI;
+background:#f8fafc;
+color:#0f172a;
+}
+
+section{
+padding:90px 8%;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.features-grid{
+grid-template-columns:1fr;
+}
+
+.pricing-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+    <header class="navbar">
+
+<div class="nav-container">
+
+<div class="logo">HR Pack-in-a-Box</div>
+
+<nav id="navMenu">
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#how">Process</a>
+<a href="#features">Features</a>
+<a href="#pricing">Pricing</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+<div class="menu-toggle" id="menuToggle">🌐</div>
+
+</div>
+
+</header>
+
+
+<style>
+
+/* BODY FIX FOR NAVBAR OVERLAP */
+
+body{
+margin:0;
+padding: top 8px;
+font-family:'Segoe UI',sans-serif;
+}
+
+
+/* NAVBAR */
+
+.navbar{
+width:100%;
+background:#ffffff;
+padding:18px 5px;
+position:fixed;
+top:0;
+left:0;
+z-index:1000;
+box-shadow:0 3px 20px rgba(0,0,0,0.06);
+}
+
+
+/* CONTAINER */
+
+.nav-container{
+max-width:1200px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+
+/* LOGO */
+
+.logo{
+font-size:22px;
+font-weight:700;
+color:#2563eb;
+}
+
+
+/* MENU */
+
+#navMenu{
+display:flex;
+gap:35px;
+align-items:center;
+}
+
+
+/* LINKS */
+
+#navMenu a{
+text-decoration:none;
+color:#333;
+font-size:15px;
+font-weight:500;
+position:relative;
+padding-bottom:4px;
+}
+
+
+/* HOVER EFFECT */
+
+#navMenu a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:0;
+width:0%;
+height:2px;
+background:#2563eb;
+transition:0.3s;
+}
+
+#navMenu a:hover::after{
+width:100%;
+}
+
+
+/* MOBILE MENU ICON */
+
+.menu-toggle{
+display:none;
+font-size:24px;
+cursor:pointer;
+}
+
+
+/* MOBILE STYLE */
+
+@media(max-width:900px){
+
+#navMenu{
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:white;
+flex-direction:column;
+gap:20px;
+padding:25px 0;
+display:none;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+#navMenu.active{
+display:flex;
+}
+
+.menu-toggle{
+display:block;
+}
+
+}
+
+</style>
+
+
+<script>
+
+const toggle=document.getElementById("menuToggle");
+const menu=document.getElementById("navMenu");
+
+/* OPEN MENU */
+
+toggle.onclick=function(){
+menu.classList.toggle("active");
+}
+
+/* CLOSE MENU AFTER CLICK */
+
+document.querySelectorAll("#navMenu a").forEach(link=>{
+link.onclick=function(){
+menu.classList.remove("active");
+}
+});
+
+</script>
+
+<section id="home" class="hero-section">
+
+<div class="hero-overlay"></div>
+
+<div class="hero-container">
+
+<div class="hero-left">
+
+<h1>Smart HR Systems for Modern Startups</h1>
+
+<p>
+HR Pack-in-a-Box helps startups simplify human resource
+operations through structured workflows, employee
+documentation systems and compliance management tools.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#contact" class="btn-primary">Get Started</a>
+
+<a href="#features" class="btn-outline">Explore Features</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<style>
+.hero-section{
+position:relative;
+padding:110px 8%;
+font-family:'Segoe UI',sans-serif;
+
+/* background image */
+
+background-image:url("hero-bg.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+height: 400;
+}
+/* HERO SECTION */
+
+.hero-section{
+position:relative;
+padding:110px 8%;
+background:rgb(163, 162, 162);
+font-family:'Segoe UI',sans-serif;
+
+/* BACKGROUND IMAGE */
+
+background-image:url("hero.jpeg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+/* LIGHT OVERLAY */
+
+.hero-overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(255, 255, 255, 0.305);
+}
+
+/* CONTAINER */
+
+.hero-container{
+position:relative;
+max-width:1100px;
+margin:auto;
+display:flex;
+align-items:center;
+}
+
+/* TEXT */
+
+.hero-left{
+max-width:600px;
+}
+
+.hero-left h1{
+font-size:48px;
+color:#000;
+margin-bottom:20px;
+}
+
+.hero-left p{
+color:#090909;
+line-height:1.7;
+margin-bottom:30px;
+}
+
+/* BUTTONS */
+
+.hero-buttons{
+display:flex;
+gap:15px;
+}
+
+.btn-primary{
+background:#2563eb;
+color:white;
+padding:12px 28px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+}
+
+.btn-primary:hover{
+background:#1d4ed8;
+}
+
+.btn-outline{
+border:2px solid #2563eb;
+color:#2563eb;
+padding:12px 28px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+}
+
+.btn-outline:hover{
+background:#2563eb;
+color:white;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero-left h1{
+font-size:36px;
+}
+
+.hero-buttons{
+flex-direction:column;
+}
+
+}
+
+</style>
+<section class="about-section" id="about">
+
+<div class="about-container">
+
+<!-- LEFT SIDE -->
+
+<div class="about-left">
+
+<h2>About HR Pack-in-a-Box</h2>
+
+<p class="about-text">
+HR Pack-in-a-Box is a modern HR infrastructure platform designed
+to help startups and growing organisations simplify human resource
+operations. The platform provides structured systems for employee
+documentation, HR workflows, compliance management and operational
+HR processes.
+</p>
+
+<p class="about-text">
+By combining digital tools, structured workflows and secure
+documentation systems, HR Pack-in-a-Box helps organisations
+build reliable HR foundations without complex systems or
+large internal HR teams.
+</p>
+
+<p class="about-text">
+The platform is built to support fast-growing teams that need
+efficient HR operations while maintaining compliance,
+organisation and transparency across their workforce.
+</p>
+
+</div>
+
+
+<!-- RIGHT SIDE CARD -->
+
+<div class="about-card">
+
+<h3>Founder Vision</h3>
+
+<p>
+HR Pack-in-a-Box was founded by <strong>Rohith Ragi</strong>
+with the goal of making HR infrastructure simple, accessible
+and structured for startups and emerging companies.
+</p>
+
+<p>
+The vision behind the company is to provide organisations
+with practical HR systems that help manage employee
+operations, documentation and compliance through a
+clear and organised digital framework.
+</p>
+
+<p class="about-note">
+Building reliable HR systems for modern organisations.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<style>
+
+/* SECTION */
+
+.about-section{
+padding:120px 8%;
+background:#2563eb;
+font-family:'Segoe UI',sans-serif;
+color:white;
+}
+
+/* CONTAINER */
+
+.about-container{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:1.2fr 1fr;
+gap:70px;
+align-items:center;
+}
+
+/* LEFT TEXT */
+
+.about-left h2{
+font-size:38px;
+margin-bottom:20px;
+}
+
+.about-text{
+line-height:1.7;
+margin-bottom:18px;
+opacity:0.95;
+}
+
+/* RIGHT CARD */
+
+.about-card{
+background:white;
+color:#333;
+padding:40px;
+border-radius:12px;
+box-shadow:0 25px 50px rgba(0,0,0,0.2);
+}
+
+.about-card h3{
+color:#2563eb;
+margin-bottom:15px;
+}
+
+.about-card p{
+line-height:1.6;
+margin-bottom:12px;
+}
+
+.about-note{
+margin-top:10px;
+font-weight:600;
+color:#2563eb;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.about-container{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+<section class="how-section" id="how">
+
+<div class="how-container">
+
+<h2 class="how-title">How HR Pack-in-a-Box Works</h2>
+
+<p class="how-subtitle">
+A simple step-by-step process that helps startups manage HR
+operations, employee documentation and compliance efficiently.
+</p>
+
+
+<div class="how-grid">
+
+<!-- STEP 1 -->
+
+<div class="how-card">
+
+<img src="hrr1.jpeg" class="how-img">
+
+<div class="step-number">01</div>
+
+<h3>Set Up Your HR System</h3>
+
+<p>
+Create your organisation profile, configure HR policies
+and prepare your HR structure to start managing employees
+in a structured digital platform.
+</p>
+
+</div>
+
+
+<!-- STEP 2 -->
+
+<div class="how-card">
+
+<img src="hrr2.jpeg" class="how-img">
+
+<div class="step-number">02</div>
+
+<h3>Add Employees & Records</h3>
+
+<p>
+Store employee profiles, contracts and HR documents
+in a secure system so your organisation maintains
+accurate employee records.
+</p>
+
+</div>
+
+
+<!-- STEP 3 -->
+
+<div class="how-card">
+
+<img src="hrr3.jpeg" class="how-img">
+
+<div class="step-number">03</div>
+
+<h3>Automate HR Workflows</h3>
+
+<p>
+Automate onboarding, approvals and HR processes
+to reduce manual work and keep HR operations
+running efficiently.
+</p>
+
+</div>
+
+
+<!-- STEP 4 -->
+
+<div class="how-card">
+
+<img src="hrr4.jpeg" class="how-img">
+
+<div class="step-number">04</div>
+
+<h3>Track HR Insights</h3>
+
+<p>
+Monitor HR activities, employee data and
+organisational insights through structured
+reports and analytics dashboards.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<style>
+
+.how-section{
+padding:110px 8%;
+background:white;
+font-family:'Segoe UI',sans-serif;
+text-align:center;
+}
+
+.how-container{
+max-width:1100px;
+margin:auto;
+}
+
+.how-title{
+font-size:36px;
+color:#000;
+margin-bottom:10px;
+}
+
+.how-subtitle{
+max-width:600px;
+margin:auto;
+color:#444;
+margin-bottom:60px;
+line-height:1.6;
+}
+
+.how-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+}
+
+/* CARD */
+
+.how-card{
+background:white;
+border:2px solid #2563eb;
+border-radius:12px;
+padding:25px;
+text-align:left;
+transition:0.3s;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.how-card:hover{
+transform:translateY(-6px);
+box-shadow:0 20px 45px rgba(0,0,0,0.1);
+border-color:#1d4ed8;
+}
+
+/* IMAGE */
+
+.how-img{
+width:100%;
+height:150px;
+object-fit:contain;
+margin-bottom:15px;
+}
+
+/* STEP NUMBER */
+
+.step-number{
+color:#2563eb;
+font-weight:700;
+font-size:14px;
+margin-bottom:8px;
+}
+
+.how-card h3{
+margin-bottom:10px;
+color:#000;
+}
+
+.how-card p{
+color:#444;
+font-size:14px;
+line-height:1.6;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.how-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+<section id="features" class="features-section">
+
+<h2 class="features-title">HR Platform Capabilities</h2>
+
+<p class="features-subtitle">
+HR Pack-in-a-Box provides structured HR infrastructure for startups,
+helping teams manage employee operations, compliance documentation
+and HR workflows through a single digital system.
+</p>
+
+
+<div class="features-grid">
+
+<!-- FEATURE 1 -->
+
+<div class="feature-card">
+
+<div class="feature-img">
+<img src="hr.jpeg">
+</div>
+
+<h3>HR Workflow Automation</h3>
+
+<p class="short-text">
+Automate HR tasks and internal workflows.
+</p>
+
+<p class="more-text">
+The platform simplifies onboarding, approvals,
+documentation processes and HR task tracking,
+reducing manual work and improving efficiency.
+</p>
+
+<button class="learn-btn">Learn More</button>
+
+</div>
+
+
+<!-- FEATURE 2 -->
+
+<div class="feature-card">
+
+<div class="feature-img">
+<img src="hr1.jpeg">
+</div>
+
+<h3>Employee Records System</h3>
+
+<p class="short-text">
+Centralised employee information management.
+</p>
+
+<p class="more-text">
+Store employee profiles, contracts, documentation
+and HR data securely in one organised system
+accessible to authorised HR teams.
+</p>
+
+<button class="learn-btn">Learn More</button>
+
+</div>
+
+
+<!-- FEATURE 3 -->
+
+<div class="feature-card">
+
+<div class="feature-img">
+<img src="hr5.jpeg">
+</div>
+
+<h3>Compliance & Policies</h3>
+
+<p class="short-text">
+Manage HR compliance and company policies.
+</p>
+
+<p class="more-text">
+Ensure company operations follow HR regulations,
+maintain policy documentation and track employee
+policy acceptance through structured workflows.
+</p>
+
+<button class="learn-btn">Learn More</button>
+
+</div>
+
+
+<!-- FEATURE 4 -->
+
+<div class="feature-card">
+
+<div class="feature-img">
+<img src="hr2.jpeg">
+</div>
+
+<h3>Employee Onboarding</h3>
+
+<p class="short-text">
+Streamline new employee onboarding.
+</p>
+
+<p class="more-text">
+Provide structured onboarding processes,
+document collection and employee setup
+so new team members can start smoothly.
+</p>
+
+<button class="learn-btn">Learn More</button>
+
+</div>
+
+
+<!-- FEATURE 5 -->
+
+<div class="feature-card">
+
+<div class="feature-img">
+<img src="hr3.jpeg">
+</div>
+
+<h3>HR Document Management</h3>
+
+<p class="short-text">
+Organise HR documentation securely.
+</p>
+
+<p class="more-text">
+Maintain employee contracts, HR policies,
+compliance forms and organisational records
+with structured document storage.
+</p>
+
+<button class="learn-btn">Learn More</button>
+
+</div>
+
+
+<!-- FEATURE 6 -->
+
+<div class="feature-card">
+
+<div class="feature-img">
+<img src="hr4.jpeg">
+</div>
+
+<h3>HR Insights & Reporting</h3>
+
+<p class="short-text">
+Understand HR operations and workforce data.
+</p>
+
+<p class="more-text">
+Track HR activities, employee data and
+organisational insights through structured
+reports that help improve HR decision-making.
+</p>
+
+<button class="learn-btn">Learn More</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<style>
+
+/* SECTION */
+
+.features-section{
+padding:110px 8%;
+background:#2563eb;
+font-family:'Segoe UI',sans-serif;
+text-align:center;
+color:white;
+}
+
+/* TITLE */
+
+.features-title{
+font-size:38px;
+margin-bottom:10px;
+}
+
+.features-subtitle{
+max-width:650px;
+margin:auto;
+margin-bottom:70px;
+line-height:1.6;
+opacity:0.9;
+}
+
+
+/* GRID */
+
+.features-grid{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+
+/* CARD */
+
+.feature-card{
+background:white;
+color:black;
+padding:30px;
+border-radius:10px;
+transition:0.3s;
+text-align:left;
+}
+
+.feature-card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.18);
+}
+
+
+/* IMAGE */
+
+.feature-img{
+width:100%;
+height:160px;
+background:#f4f7ff;
+border-radius:8px;
+display:flex;
+align-items:center;
+justify-content:center;
+margin-bottom:15px;
+}
+
+.feature-img img{
+max-width:100%;
+max-height:100%;
+object-fit:contain;
+}
+
+
+/* TEXT */
+
+.feature-card h3{
+margin-bottom:8px;
+}
+
+.short-text{
+color:#444;
+margin-bottom:10px;
+}
+
+.more-text{
+display:none;
+font-size:14px;
+color:#444;
+line-height:1.6;
+margin-bottom:10px;
+}
+
+
+/* BUTTON */
+
+.learn-btn{
+background:#2563eb;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:6px;
+cursor:pointer;
+font-weight:600;
+}
+
+.learn-btn:hover{
+background:#1e40af;
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.features-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+
+
+<script>
+
+const buttons=document.querySelectorAll(".learn-btn");
+
+buttons.forEach(btn=>{
+
+btn.addEventListener("click",function(){
+
+const card=this.parentElement;
+const more=card.querySelector(".more-text");
+
+if(more.style.display==="block"){
+
+more.style.display="none";
+this.innerText="Learn More";
+
+}else{
+
+more.style.display="block";
+this.innerText="Show Less";
+
+}
+
+});
+
+});
+
+</script>
+<section id="pricing" class="pricing-section">
+
+<h2 class="pricing-title">Simple & Flexible Pricing</h2>
+
+<p class="pricing-subtitle">
+Choose the HR solution that fits your startup or growing organisation.
+Upgrade anytime as your team expands.
+</p>
+
+
+<div class="pricing-container">
+
+<!-- STARTER -->
+
+<div class="pricing-card">
+
+<h3>Starter</h3>
+
+<p class="price-text">Starting Plan</p>
+
+<ul>
+<li>HR Workflow Automation</li>
+<li>Employee Documentation</li>
+<li>Basic HR Compliance Support</li>
+<li>Email Support</li>
+</ul>
+
+<a href="#contact" class="price-btn">Get Started</a>
+
+</div>
+
+
+
+<!-- PRO -->
+
+<div class="pricing-card featured">
+
+<div class="badge">Recommended</div>
+
+<h3>Pro</h3>
+
+<p class="price-text">For Growing Teams</p>
+
+<ul>
+<li>Advanced HR Workflows</li>
+<li>Employee Records Management</li>
+<li>Compliance & Policy Tools</li>
+<li>Team Collaboration</li>
+<li>Priority Support</li>
+</ul>
+
+<a href="#contact" class="price-btn">Start Pro</a>
+
+</div>
+
+
+
+<!-- CUSTOM -->
+
+<div class="pricing-card">
+
+<h3>Custom</h3>
+
+<p class="price-text">Custom Pricing</p>
+
+<ul>
+<li>Complete HR Infrastructure</li>
+<li>Custom HR Automation</li>
+<li>Advanced Compliance Setup</li>
+<li>Dedicated HR Support</li>
+<li>Organisation Integration</li>
+</ul>
+
+<a href="#contact" class="price-btn">Contact Sales</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<style>
+
+/* SECTION */
+
+.pricing-section{
+padding:110px 8%;
+background:white;
+font-family:'Segoe UI',sans-serif;
+text-align:center;
+}
+
+/* TITLE */
+
+.pricing-title{
+font-size:40px;
+color:black;
+margin-bottom:10px;
+}
+
+.pricing-subtitle{
+color:#444;
+max-width:600px;
+margin:auto;
+margin-bottom:60px;
+line-height:1.6;
+}
+
+
+/* GRID */
+
+.pricing-container{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+
+/* CARD */
+
+.pricing-card{
+border:2px solid #2563eb;
+padding:40px 30px;
+border-radius:10px;
+background:white;
+transition:0.3s;
+position:relative;
+}
+
+.pricing-card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.08);
+}
+
+
+/* FEATURED */
+
+.featured{
+background:#f8fbff;
+transform:scale(1.05);
+}
+
+.badge{
+position:absolute;
+top:-12px;
+left:50%;
+transform:translateX(-50%);
+background:#2563eb;
+color:white;
+padding:6px 14px;
+border-radius:20px;
+font-size:12px;
+}
+
+
+/* TEXT */
+
+.pricing-card h3{
+color:black;
+margin-bottom:10px;
+font-size:22px;
+}
+
+.price-text{
+color:#2563eb;
+font-weight:600;
+margin-bottom:20px;
+}
+
+
+/* LIST */
+
+.pricing-card ul{
+list-style:none;
+padding:0;
+margin-bottom:25px;
+}
+
+.pricing-card li{
+margin:10px 0;
+color:#444;
+font-size:14px;
+}
+
+
+/* BUTTON */
+
+.price-btn{
+display:inline-block;
+padding:12px 26px;
+background:#2563eb;
+color:white;
+text-decoration:none;
+border-radius:6px;
+font-weight:600;
+transition:0.3s;
+}
+
+.price-btn:hover{
+background:#1e40af;
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.pricing-container{
+grid-template-columns:1fr;
+}
+
+.featured{
+transform:none;
+}
+
+}
+
+</style>
+<section class="faq-section" id="faq">
+
+<div class="faq-header">
+
+<h2>Frequently Asked Questions</h2>
+
+<p class="faq-subtitle">
+Find answers to common questions about HR Pack-in-a-Box and how our platform
+helps startups simplify HR operations and employee management.
+</p>
+
+</div>
+
+
+<div class="faq-container">
+
+<!-- FAQ 1 -->
+
+<div class="faq-card">
+
+<button class="faq-question">
+What is HR Pack-in-a-Box?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+<p>
+HR Pack-in-a-Box is a digital HR platform designed to help startups manage
+employee documentation, HR workflows, and compliance in one structured system.
+</p>
+</div>
+
+</div>
+
+
+<!-- FAQ 2 -->
+
+<div class="faq-card">
+
+<button class="faq-question">
+Who can use HR Pack-in-a-Box?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+<p>
+The system is designed for startups, growing companies, and small businesses
+that need a reliable HR structure without building a large HR department.
+</p>
+</div>
+
+</div>
+
+
+<!-- FAQ 3 -->
+
+<div class="faq-card">
+
+<button class="faq-question">
+What HR processes does the platform support?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+<p>
+It supports employee records, documentation management, HR workflows,
+policy tracking, and HR compliance processes.
+</p>
+</div>
+
+</div>
+
+
+<!-- FAQ 4 -->
+
+<div class="faq-card">
+
+<button class="faq-question">
+Is employee data secure?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+<p>
+Yes. HR Pack-in-a-Box uses structured systems designed to keep employee
+information secure and organised within the platform.
+</p>
+</div>
+
+</div>
+
+
+<!-- FAQ 5 -->
+
+<div class="faq-card">
+
+<button class="faq-question">
+How can a company get started?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+<p>
+Companies can contact our team through the website to schedule a
+demo and explore how HR Pack-in-a-Box can support their HR operations.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<style>
+
+/* SECTION */
+
+.faq-section{
+padding:110px 8%;
+background:#2563eb;
+font-family:'Segoe UI',sans-serif;
+}
+
+/* HEADER */
+
+.faq-header{
+text-align:center;
+max-width:700px;
+margin:auto;
+margin-bottom:50px;
+}
+
+.faq-header h2{
+color:white;
+font-size:36px;
+margin-bottom:10px;
+}
+
+.faq-subtitle{
+color:#e5e7eb;
+font-size:15px;
+line-height:1.6;
+}
+
+/* CONTAINER */
+
+.faq-container{
+max-width:900px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+/* CARD */
+
+.faq-card{
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 15px 40px rgba(0,0,0,0.1);
+}
+
+/* QUESTION */
+
+.faq-question{
+width:100%;
+padding:18px 22px;
+border:none;
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-size:16px;
+font-weight:600;
+color:#000;
+cursor:pointer;
+}
+
+/* ICON */
+
+.faq-question span{
+font-size:22px;
+color:#2563eb;
+}
+
+/* ANSWER */
+
+.faq-answer{
+max-height:0;
+overflow:hidden;
+transition:max-height 0.35s ease;
+padding:0 22px;
+}
+
+.faq-answer p{
+color:#444;
+line-height:1.6;
+padding-bottom:18px;
+font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.faq-header h2{
+font-size:28px;
+}
+
+}
+
+</style>
+
+
+
+<script>
+
+const faq=document.querySelectorAll(".faq-question");
+
+faq.forEach(q=>{
+
+q.addEventListener("click",()=>{
+
+const ans=q.nextElementSibling;
+
+if(ans.style.maxHeight){
+ans.style.maxHeight=null;
+q.querySelector("span").innerHTML="+";
+}else{
+
+document.querySelectorAll(".faq-answer").forEach(a=>{
+a.style.maxHeight=null;
+});
+
+document.querySelectorAll(".faq-question span").forEach(s=>{
+s.innerHTML="+";
+});
+
+ans.style.maxHeight=ans.scrollHeight+"px";
+q.querySelector("span").innerHTML="−";
+
+}
+
+});
+
+});
+
+</script>
+<section id="contact" class="contact-section">
+
+<div class="contact-container">
+
+<!-- LEFT SIDE -->
+
+<div class="contact-left">
+
+<h2>Let's Talk About Your HR Needs</h2>
+
+<p class="contact-text">
+HR Pack-in-a-Box helps startups simplify HR operations with structured
+employee documentation, compliance management and modern HR workflows.
+Our platform makes HR management easy, organised and scalable.
+</p>
+
+<div class="contact-benefits">
+
+<div class="benefit-box">✔ HR Workflow Automation</div>
+<div class="benefit-box">✔ Employee Documentation</div>
+<div class="benefit-box">✔ Compliance Support</div>
+<div class="benefit-box">✔ Startup HR Systems</div>
+
+</div>
+
+</div>
+
+
+<!-- FORM -->
+
+<div class="contact-card">
+
+<h3>Send Us a Message</h3>
+
+<form id="contactForm">
+
+<input type="hidden" name="access_key" value="1a7822eb-721c-4f65-a6e3-bc00b1fa87d0">
+
+<input type="hidden" name="subject" value="New HR Pack-in-a-Box Contact Message">
+
+<input type="text" name="name" placeholder="Full Name" required>
+
+<input type="email" name="email" placeholder="Email Address" required>
+
+<input type="text" name="phone" placeholder="Phone Number">
+
+<textarea name="message" placeholder="Tell us how we can help you" required></textarea>
+
+<button type="submit">Send Message</button>
+
+<p id="result"></p>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<style>
+
+/* SECTION */
+
+.contact-section{
+padding:100px 8%;
+background:#ffffff;
+font-family:'Segoe UI',sans-serif;
+}
+
+/* GRID */
+
+.contact-container{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+/* LEFT */
+
+.contact-left h2{
+font-size:36px;
+margin-bottom:18px;
+color:#000;
+}
+
+.contact-text{
+color:#444;
+line-height:1.7;
+margin-bottom:25px;
+}
+
+/* BENEFITS */
+
+.contact-benefits{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+}
+
+.benefit-box{
+border:1px solid #2563eb;
+padding:12px;
+border-radius:6px;
+font-size:14px;
+font-weight:600;
+color:#2563eb;
+background:#f8fbff;
+}
+
+/* FORM CARD */
+
+.contact-card{
+border:2px solid #2563eb;
+padding:35px;
+border-radius:10px;
+background:white;
+box-shadow:0 20px 40px rgba(0,0,0,0.05);
+max-width:420px;
+}
+
+.contact-card h3{
+margin-bottom:20px;
+color:black;
+}
+
+/* FORM */
+
+#contactForm{
+display:flex;
+flex-direction:column;
+gap:14px;
+}
+
+input,textarea{
+padding:12px;
+border:1px solid #ccc;
+border-radius:6px;
+font-size:14px;
+transition:0.3s;
+}
+
+input:focus,
+textarea:focus{
+outline:none;
+border-color:#2563eb;
+box-shadow:0 0 0 2px rgba(37,99,235,0.1);
+}
+
+textarea{
+height:110px;
+resize:none;
+}
+
+/* BUTTON */
+
+button{
+background:#2563eb;
+color:white;
+border:none;
+padding:12px;
+border-radius:6px;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#1e40af;
+}
+
+/* RESULT */
+
+#result{
+margin-top:8px;
+font-size:13px;
+font-weight:600;
+color:#2563eb;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.contact-container{
+grid-template-columns:1fr;
+gap:40px;
+}
+
+.contact-left{
+text-align:center;
+}
+
+.contact-benefits{
+grid-template-columns:1fr;
+}
+
+.contact-card{
+margin:auto;
+}
+
+}
+
+</style>
+
+
+
+<script>
+
+const form = document.getElementById("contactForm");
+const result = document.getElementById("result");
+
+form.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+result.innerHTML="Sending message...";
+
+const formData=new FormData(form);
+
+fetch("https://api.web3forms.com/submit",{
+method:"POST",
+body:formData
+})
+.then(res=>res.json())
+.then(data=>{
+
+if(data.success){
+result.innerHTML="✅ Message sent successfully!";
+form.reset();
+}else{
+result.innerHTML="❌ Failed to send message.";
+}
+
+})
+.catch(()=>{
+result.innerHTML="⚠️ Network error.";
+});
+
+});
+
+</script>
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-left">
+<h3>HR Pack-in-a-Box</h3>
+<p>Simple HR systems for growing startups</p>
+</div>
+
+<div class="footer-right">
+<p>© 2026 HR Pack-in-a-Box. All rights reserved.</p>
+</div>
+
+</div>
+
+</footer>
+
+
+<style>
+
+.footer{
+background:#2563eb;
+padding:16px 8%;
+font-family:'Segoe UI',sans-serif;
+color:white;
+}
+
+.footer-container{
+max-width:1100px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+flex-wrap:wrap;
+}
+
+/* LEFT */
+
+.footer-left h3{
+margin:0;
+font-size:15px;
+color:white;
+}
+
+.footer-left p{
+margin:2px 0 0;
+font-size:12px;
+color:#e5e7eb;
+}
+
+/* RIGHT */
+
+.footer-right{
+font-size:12px;
+color:#e5e7eb;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+.footer-container{
+flex-direction:column;
+text-align:center;
+gap:6px;
+}
+
+}
+
+</style>
+
+</body>
+</html>
